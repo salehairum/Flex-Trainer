@@ -68,7 +68,7 @@ namespace project
             //Hide();
             //using (loginAdmin form = new loginAdmin())
             //    form.ShowDialog();
-            // my name is anoosha ali
+            // my name is saleha irum.
 
         }
 
