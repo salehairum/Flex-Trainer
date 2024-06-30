@@ -1,0 +1,836 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{094DF5EB-7FCB-4F73-BFF3-2B2C62B83FA3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>project</RootNamespace>
+    <AssemblyName>project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddTrainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTrainer.Designer.cs">
+      <DependentUpon>AddTrainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin.Designer.cs">
+      <DependentUpon>admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AReport1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AReport1.Designer.cs">
+      <DependentUpon>AReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AReport10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AReport10.Designer.cs">
+      <DependentUpon>AReport10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AReport2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AReport2.Designer.cs">
+      <DependentUpon>AReport2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AReport3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AReport3.Designer.cs">
+      <DependentUpon>AReport3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AReport4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AReport4.Designer.cs">
+      <DependentUpon>AReport4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AReport5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AReport5.Designer.cs">
+      <DependentUpon>AReport5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AReport6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AReport6.Designer.cs">
+      <DependentUpon>AReport6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AReport7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AReport7.Designer.cs">
+      <DependentUpon>AReport7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AReport8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AReport8.Designer.cs">
+      <DependentUpon>AReport8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AReport9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AReport9.Designer.cs">
+      <DependentUpon>AReport9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookTrainingSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookTrainingSession.Designer.cs">
+      <DependentUpon>BookTrainingSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dietplan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dietplan.Designer.cs">
+      <DependentUpon>dietplan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DietPlanReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DietPlanReport.Designer.cs">
+      <DependentUpon>DietPlanReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dietplanTrainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dietplanTrainer.Designer.cs">
+      <DependentUpon>dietplanTrainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DietPlanTrainerReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DietPlanTrainerReport.Designer.cs">
+      <DependentUpon>DietPlanTrainerReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeedbackGym.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeedbackGym.Designer.cs">
+      <DependentUpon>FeedbackGym.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GymReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GymReport.Designer.cs">
+      <DependentUpon>GymReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginAdmin.Designer.cs">
+      <DependentUpon>loginAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginGymowner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginGymowner.Designer.cs">
+      <DependentUpon>loginGymowner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginTrainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginTrainer.Designer.cs">
+      <DependentUpon>loginTrainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="removeGym.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="removeGym.Designer.cs">
+      <DependentUpon>removeGym.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report.Designer.cs">
+      <DependentUpon>report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report1.Designer.cs">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report10.Designer.cs">
+      <DependentUpon>Report10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report2.Designer.cs">
+      <DependentUpon>Report2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report3.Designer.cs">
+      <DependentUpon>Report3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report4.Designer.cs">
+      <DependentUpon>Report4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report5.Designer.cs">
+      <DependentUpon>Report5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report6.Designer.cs">
+      <DependentUpon>Report6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report7.Designer.cs">
+      <DependentUpon>Report7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report8.Designer.cs">
+      <DependentUpon>Report8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report9.Designer.cs">
+      <DependentUpon>Report9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources.cs" />
+    <Compile Include="signupAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="signupAdmin.Designer.cs">
+      <DependentUpon>signupAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="signupGymowner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="signupGymowner.Designer.cs">
+      <DependentUpon>signupGymowner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignupMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignupMember.Designer.cs">
+      <DependentUpon>SignupMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMember.Designer.cs">
+      <DependentUpon>LoginMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="memberWorkOutPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="memberWorkOutPlan.Designer.cs">
+      <DependentUpon>memberWorkOutPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeedbackMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeedbackMember.Designer.cs">
+      <DependentUpon>FeedbackMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeedbackTrainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeedbackTrainer.Designer.cs">
+      <DependentUpon>FeedbackTrainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gymowner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gymowner.Designer.cs">
+      <DependentUpon>gymowner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="member.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="member.Designer.cs">
+      <DependentUpon>member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="registerGym.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registerGym.Designer.cs">
+      <DependentUpon>registerGym.cs</DependentUpon>
+    </Compile>
+    <Compile Include="registerGymAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registerGymAdmin.Designer.cs">
+      <DependentUpon>registerGymAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveMember.Designer.cs">
+      <DependentUpon>RemoveMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveTrainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveTrainer.Designer.cs">
+      <DependentUpon>RemoveTrainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="signupTrainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="signupTrainer.Designer.cs">
+      <DependentUpon>signupTrainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trainer Workout Plan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trainer Workout Plan.Designer.cs">
+      <DependentUpon>Trainer Workout Plan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trainer.Designer.cs">
+      <DependentUpon>trainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrainingSessionRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainingSessionRequest.Designer.cs">
+      <DependentUpon>TrainingSessionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewForms.Designer.cs">
+      <DependentUpon>viewForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkoutPlanReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkoutPlanReport.Designer.cs">
+      <DependentUpon>WorkoutPlanReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkoutPlanTrainerReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkoutPlanTrainerReport.Designer.cs">
+      <DependentUpon>WorkoutPlanTrainerReport.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddTrainer.resx">
+      <DependentUpon>AddTrainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin.resx">
+      <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AReport1.resx">
+      <DependentUpon>AReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AReport10.resx">
+      <DependentUpon>AReport10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AReport2.resx">
+      <DependentUpon>AReport2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AReport3.resx">
+      <DependentUpon>AReport3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AReport4.resx">
+      <DependentUpon>AReport4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AReport5.resx">
+      <DependentUpon>AReport5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AReport6.resx">
+      <DependentUpon>AReport6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AReport7.resx">
+      <DependentUpon>AReport7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AReport8.resx">
+      <DependentUpon>AReport8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AReport9.resx">
+      <DependentUpon>AReport9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookTrainingSession.resx">
+      <DependentUpon>BookTrainingSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dietplan.resx">
+      <DependentUpon>dietplan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DietPlanReport.resx">
+      <DependentUpon>DietPlanReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dietplanTrainer.resx">
+      <DependentUpon>dietplanTrainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DietPlanTrainerReport.resx">
+      <DependentUpon>DietPlanTrainerReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeedbackGym.resx">
+      <DependentUpon>FeedbackGym.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GymReport.resx">
+      <DependentUpon>GymReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginAdmin.resx">
+      <DependentUpon>loginAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginGymowner.resx">
+      <DependentUpon>loginGymowner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginTrainer.resx">
+      <DependentUpon>loginTrainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="removeGym.resx">
+      <DependentUpon>removeGym.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report.resx">
+      <DependentUpon>report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.resx">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report10.resx">
+      <DependentUpon>Report10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2.resx">
+      <DependentUpon>Report2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report3.resx">
+      <DependentUpon>Report3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report4.resx">
+      <DependentUpon>Report4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report5.resx">
+      <DependentUpon>Report5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report6.resx">
+      <DependentUpon>Report6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report7.resx">
+      <DependentUpon>Report7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report8.resx">
+      <DependentUpon>Report8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report9.resx">
+      <DependentUpon>Report9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signupAdmin.resx">
+      <DependentUpon>signupAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signupGymowner.resx">
+      <DependentUpon>signupGymowner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignupMember.resx">
+      <DependentUpon>SignupMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMember.resx">
+      <DependentUpon>LoginMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="memberWorkOutPlan.resx">
+      <DependentUpon>memberWorkOutPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeedbackMember.resx">
+      <DependentUpon>FeedbackMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeedbackTrainer.resx">
+      <DependentUpon>FeedbackTrainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gymowner.resx">
+      <DependentUpon>gymowner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="member.resx">
+      <DependentUpon>member.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registerGym.resx">
+      <DependentUpon>registerGym.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registerGymAdmin.resx">
+      <DependentUpon>registerGymAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveMember.resx">
+      <DependentUpon>RemoveMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveTrainer.resx">
+      <DependentUpon>RemoveTrainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signupTrainer.resx">
+      <DependentUpon>signupTrainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trainer Workout Plan.resx">
+      <DependentUpon>Trainer Workout Plan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trainer.resx">
+      <DependentUpon>trainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainingSessionRequest.resx">
+      <DependentUpon>TrainingSessionRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewForms.resx">
+      <DependentUpon>viewForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkoutPlanReport.resx">
+      <DependentUpon>WorkoutPlanReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkoutPlanTrainerReport.resx">
+      <DependentUpon>WorkoutPlanTrainerReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\project.exe.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gym1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gym5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gym2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gym4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gym7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gym8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlueTheme.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gym.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dumbbell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gym3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bodybuilding.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weights %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\workout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rating.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\body-building.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlueTheme1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gym15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gym14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gym13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gym131.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gym12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gym11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2024-05-02 at 9.44.33 AM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2024-05-02 at 9.44.34 AM %281%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2024-05-02 at 9.44.34 AM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2024-05-02 at 9.44.35 AM %281%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2024-05-02 at 9.44.35 AM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gym19.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gym20.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weights %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diet %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rate %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business-report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\approved.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\real-estate-agent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\membership.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\building.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trainer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gym.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\software-engineer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\google.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linkedin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feedback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feedback2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gym1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\request.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome-back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\planning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appointment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\write.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\CrystalDecisions.CrystalReports.Engine.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.ReportSource.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.Shared.dll" />
+    <Content Include="bin\Debug\CrystalDecisions.Windows.Forms.dll" />
+    <Content Include="bin\Debug\project.exe" />
+    <Content Include="bin\Debug\project.pdb" />
+    <Content Include="bin\Debug\stdole.dll" />
+    <Content Include="Resources\add-user1.png" />
+    <Content Include="Resources\gym10.jpg" />
+    <Content Include="Resources\gym10.png" />
+    <Content Include="Resources\gym81.jpg" />
+    <Content Include="Resources\gym81.png" />
+    <Content Include="Resources\gym9.jpg" />
+    <Content Include="Resources\gym9.png" />
+    <None Include="Resources\seo-report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
