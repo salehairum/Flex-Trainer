@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace project
 {
@@ -63,7 +64,7 @@ namespace project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;SqlConnection conn = new SqlConnection(conString);//connection string 
             conn.Open();
             SqlCommand cm;
             string location = textBox2.Text;
@@ -85,6 +86,50 @@ namespace project
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void Home_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            gymowner_cs form = new gymowner_cs(gymOwnerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+
+        private void booktrainingsession_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            RemoveTrainer form = new RemoveTrainer(this.gymOwnerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void createdietplan_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            RemoveMember form = new RemoveMember(gymOwnerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void dietplanreport_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddTrainer form = new AddTrainer(gymOwnerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void givefeedback_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            registerGym form = new registerGym(gymOwnerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

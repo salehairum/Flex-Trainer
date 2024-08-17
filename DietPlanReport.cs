@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace project
 {
@@ -16,10 +17,10 @@ namespace project
         int nutrition;
         int memberid;
         string madeBy;
-        public DietPlanReport()
+        public DietPlanReport(int userId)
         {
             InitializeComponent();
-            memberid = 53;
+            memberid = userId;
         }
 
         private void DietPlanReport_Load(object sender, EventArgs e)
@@ -34,8 +35,10 @@ namespace project
                 DataRowView selectedRow = comboBox1.SelectedItem as DataRowView;
                 if (selectedRow != null)
                 {
-                    string selectedPurpose = selectedRow["purpose"].ToString();
-                    using (SqlConnection sqlCon = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+                    string selectedPurpose = selectedRow["purpose"].ToString(); 
+                    string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+                    using (SqlConnection sqlCon = new SqlConnection(conString))
                     {
                         sqlCon.Open();
                         SqlDataAdapter sqlData = new SqlDataAdapter("Select * from dietplantrainer where purpose='" + selectedPurpose + "' union select *  from dietplanmember where purpose='" + selectedPurpose + "'", sqlCon);
@@ -49,7 +52,9 @@ namespace project
 
         private void LoadComboBoxDataWithPurposes()
         {
-            using (SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+            using (SqlConnection conn = new SqlConnection(conString))
             {
                 string query = "SELECT DISTINCT purpose FROM dietplantrainer";
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);
@@ -81,7 +86,9 @@ namespace project
         }
         private void LoadComboBoxDataWithType()
         {
-            using (SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+            using (SqlConnection conn = new SqlConnection(conString))
             {
                 string query = "SELECT DISTINCT dType FROM dietplantrainer";
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);
@@ -121,7 +128,9 @@ namespace project
                 if (selectedRow != null)
                 {
                     string type = selectedRow["dtype"].ToString();
-                    using (SqlConnection sqlCon = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+                    string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+                    using (SqlConnection sqlCon = new SqlConnection(conString))
                     {
                         sqlCon.Open();
                         SqlDataAdapter sqlData = new SqlDataAdapter("Select * from dietplantrainer where dtype='" + type + "' union select *  from dietplanmember where dtype='" + type + "'", sqlCon);
@@ -137,8 +146,10 @@ namespace project
         {
             if (comboBox5.SelectedItem != null)
             {
-                string portion = comboBox5.SelectedItem.ToString();
-                using (SqlConnection sqlCon = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+                string portion = comboBox5.SelectedItem.ToString(); 
+                string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+                using (SqlConnection sqlCon = new SqlConnection(conString))
                 {
                     sqlCon.Open();
                     SqlDataAdapter sqlData = new SqlDataAdapter("Select * from dietplanmember where portionSize='"+portion+ "' union all Select * from dietplantrainer where portionSize='" + portion+"'", sqlCon);
@@ -157,7 +168,9 @@ namespace project
                 if (selectedRow != null)
                 {
                     int memberID = Convert.ToInt32(selectedRow["memberID"]);
-                    using (SqlConnection sqlCon = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+                    string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+                    using (SqlConnection sqlCon = new SqlConnection(conString))
                     {
                         sqlCon.Open();
                         SqlDataAdapter sqlData = new SqlDataAdapter("Select * from dietplanmember where memberID=" + memberID, sqlCon);
@@ -171,7 +184,9 @@ namespace project
 
         private void LoadComboBoxDataWithMemberID()
         {
-            using (SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+            using (SqlConnection conn = new SqlConnection(conString))
             {
                 string query = "SELECT distinct memberID FROM dietplanmember";
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);
@@ -198,7 +213,9 @@ namespace project
         }
         private void LoadComboBoxDataWithTrainerID()
         {
-            using (SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+            using (SqlConnection conn = new SqlConnection(conString))
             {
                 string query = "SELECT distinct TrainerID FROM dietplanTrainer";
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);
@@ -225,7 +242,9 @@ namespace project
         }
         private void displayNutritionGrid()
         {
-            using (SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+            using (SqlConnection conn = new SqlConnection(conString))
             {
                 conn.Open();
                 string query1 = "create view Nutritional_Values_Of_Member_DietPlans as select dietplanid, meals.mealName, sum(meals.carbohydrates + meals.fat + meals.fiber + meals.protein) as nutritional_value from MealInDietPlanMember inner join meals on meals.mealId = MealInDietPlanMember.mealID group by dietPlanId, meals.mealName";
@@ -266,8 +285,10 @@ namespace project
                 DataRowView selectedRow = comboBox4.SelectedItem as DataRowView;
                 if (selectedRow != null)
                 {
-                    int trainerID = Convert.ToInt32(selectedRow["trainerID"]);
-                    using (SqlConnection sqlCon = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+                    int trainerID = Convert.ToInt32(selectedRow["trainerID"]); 
+                    string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+                    using (SqlConnection sqlCon = new SqlConnection(conString))
                     {
                         sqlCon.Open();
                         SqlDataAdapter sqlData = new SqlDataAdapter("Select * from dietplantrainer where trainerID=" + trainerID, sqlCon);
@@ -303,7 +324,9 @@ namespace project
 
         private void button3_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sqlCon = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+            using (SqlConnection sqlCon = new SqlConnection(conString))
             {
                 sqlCon.Open();
                 SqlDataAdapter sqlData = new SqlDataAdapter("Select * from dietplanmember where memberid!=" + memberid, sqlCon);
@@ -315,7 +338,9 @@ namespace project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sqlCon = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+            using (SqlConnection sqlCon = new SqlConnection(conString))
             {
                 sqlCon.Open();
                 SqlDataAdapter sqlData = new SqlDataAdapter("Select * from dietplantrainer", sqlCon);
@@ -336,7 +361,9 @@ namespace project
 
         private void Approve1_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+            SqlConnection conn = new SqlConnection(conString);
             conn.Open();
             SqlCommand cm;
             if (textBox4.Text != null)
@@ -359,7 +386,9 @@ namespace project
 
         private void button5_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sqlCon = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+            using (SqlConnection sqlCon = new SqlConnection(conString))
             {
                 sqlCon.Open();
                 SqlDataAdapter sqlData = new SqlDataAdapter("Select * from dietplanmember where memberid=" + memberid, sqlCon);
@@ -367,6 +396,68 @@ namespace project
                 sqlData.Fill(dtbl);
                 dataGridView1.DataSource = dtbl;
             }
+        }
+
+        private void Home_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            member form = new member(memberid);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void createworkoutplan_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            memberWorkOutPlan form = new memberWorkOutPlan(memberid);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            WorkoutPlanReport form = new WorkoutPlanReport(memberid);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void createdietplan_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            dietplan form = new dietplan(memberid);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            DietPlanReport form = new DietPlanReport(memberid);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void booktrainingsession_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            BookTrainingSession form = new BookTrainingSession(memberid);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void givefeedback_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            FeedbackMember form = new FeedbackMember(memberid);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
         }
     }
 }

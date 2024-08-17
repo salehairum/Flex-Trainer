@@ -13,8 +13,10 @@ namespace project
 {
     public partial class Report5 : Form
     {
-        public Report5()
+        int AdminID;
+        public Report5(int userId)
         {
+            AdminID = userId;
             InitializeComponent();
         }
 
@@ -139,6 +141,14 @@ namespace project
         private void panel11_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            viewForms form = new viewForms(AdminID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
         }
     }
 }

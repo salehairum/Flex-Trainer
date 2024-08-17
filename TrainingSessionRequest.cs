@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Configuration;
 
 namespace project
 {
@@ -34,7 +35,7 @@ namespace project
         /*
         private void TrainingSessionRequest_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;SqlConnection conn = new SqlConnection(conString);
             conn.Open();
             string dob;
             SqlCommand cm1, cm2, cm3;
@@ -64,7 +65,7 @@ namespace project
 
         private void TrainingSessionRequest_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;SqlConnection conn = new SqlConnection(conString);//connection string 
             conn.Open();
 
             string query = "SELECT memberId, timee FROM BookPersonalTrainingSession WHERE trainerID = @trainerID";
@@ -110,7 +111,8 @@ namespace project
 
         private void TrainingSessionRequest_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+            SqlConnection conn = new SqlConnection(conString);//connection string 
             conn.Open();
 
             string query = "SELECT memberId, timee FROM BookPersonalTrainingSession WHERE trainerID = @trainerID";
@@ -214,7 +216,7 @@ namespace project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;SqlConnection conn = new SqlConnection(conString);
             conn.Open();
             string query1 = "UPDATE BookPersonalTrainingSession SET timee = @newTimee WHERE memberId = @memberId and trainerId = @trainerId";
 
@@ -231,7 +233,7 @@ namespace project
 
         private void button4_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;SqlConnection conn = new SqlConnection(conString);
             conn.Open();
 
             string query = "SELECT memberId, timee FROM BookPersonalTrainingSession WHERE trainerID = @trainerID and approved = 0";
@@ -272,7 +274,7 @@ namespace project
 
         private void Approve2_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;SqlConnection conn = new SqlConnection(conString);
             conn.Open();
             string query1 = "UPDATE BookPersonalTrainingSession SET approved = 1 WHERE memberId = @memberId and trainerId = @trainerId";
 
@@ -288,7 +290,7 @@ namespace project
 
         private void Reject2_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;SqlConnection conn = new SqlConnection(conString);
             conn.Open();
             string query1 = "delete from BookPersonalTrainingSession WHERE memberId = @memberId and trainerId = @trainerId";
 
@@ -317,6 +319,10 @@ namespace project
 
         private void createworkoutplan_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Trainer_Workout_Plan form = new Trainer_Workout_Plan(trainerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
         }
 
         private void createdietplan_Click_1(object sender, EventArgs e)
@@ -336,6 +342,22 @@ namespace project
         {
             this.Hide();
             FeedbackTrainer form = new FeedbackTrainer(trainerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void workoutplanreport_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            WorkoutPlanTrainerReport form = new WorkoutPlanTrainerReport(trainerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void dietplanreport_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DietPlanTrainerReport form = new DietPlanTrainerReport(trainerID);
             form.Show();
             form.FormClosed += (s, argc) => this.Close();
         }

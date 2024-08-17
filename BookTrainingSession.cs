@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace project
 {
@@ -36,7 +37,9 @@ namespace project
         }
         private void LoadComboBoxDataWithTrainerID()
         {
-            using (SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+            using (SqlConnection conn = new SqlConnection(conString))
             {
                 string query = "SELECT trainerId FROM trainer";
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -70,7 +73,9 @@ namespace project
 
         private void Approve1_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+            SqlConnection conn = new SqlConnection(conString);//connection string 
             conn.Open();
             SqlCommand cmd;
             string query = "insert into BookPersonalTrainingSession (trainerId, memberId, timee) values(" + trainerId + "," + userId + ",convert(time, '" + time + "'))";
@@ -156,6 +161,22 @@ namespace project
         {
             this.Hide();
             FeedbackMember form = new FeedbackMember(userId);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void workoutplanreport_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            WorkoutPlanReport form = new WorkoutPlanReport(userId);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void dietplanreport_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DietPlanReport form = new DietPlanReport(userId);
             form.Show();
             form.FormClosed += (s, argc) => this.Close();
         }

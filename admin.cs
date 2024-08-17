@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace project
 {
@@ -24,7 +25,8 @@ namespace project
 
         private void admin_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string  
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+            SqlConnection conn = new SqlConnection(conString);//connection string 
             conn.Open();
             string dob;
             SqlCommand cm1, cm2;
@@ -92,7 +94,10 @@ namespace project
 
         private void createworkoutplan_Click(object sender, EventArgs e)
         {
-            //gym reports
+            this.Hide();
+            GymReport form = new GymReport(adminID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
         }
 
         private void givefeedback_Click(object sender, EventArgs e)
@@ -106,7 +111,7 @@ namespace project
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            viewForms form = new viewForms();
+            viewForms form = new viewForms(adminID);
             form.Show();
             form.FormClosed += (s, argc) => this.Close();
         }

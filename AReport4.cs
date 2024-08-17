@@ -8,15 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace project
 {
     public partial class AReport4 : Form
     {
         int rating;
-        public AReport4()
+
+        int AdminID;
+        public AReport4(int userId)
         {
             InitializeComponent();
+            AdminID = userId;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -26,7 +30,9 @@ namespace project
 
         private void Reject1_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sqlCon = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+            using (SqlConnection sqlCon = new SqlConnection(conString))
             {
                 sqlCon.Open();
                 SqlDataAdapter sqlData = new SqlDataAdapter("select * from FeedbackTrainer where rating="+rating, sqlCon);
@@ -39,6 +45,14 @@ namespace project
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            viewForms form = new viewForms(AdminID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
         }
     }
 }

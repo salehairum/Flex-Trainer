@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace project
@@ -94,7 +95,9 @@ namespace project
 
         private void LoadComboBoxDataWithTrainerID()
         {
-            using (SqlConnection conn = new SqlConnection("Data Source=DESKTOP-E85OBQM\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+            using (SqlConnection conn = new SqlConnection(conString))
             {
                 string query = "SELECT trainerID FROM trainer";
 
@@ -239,8 +242,8 @@ namespace project
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-E85OBQM\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+            SqlConnection conn = new SqlConnection(conString);//connection string 
             conn.Open();
             SqlCommand cmd;
             string query = "insert into feedbackTrainer values('" + comment + "'," + rating + "," + dicipline + "," + help + "," + trainerId + "," + userId + ")";
@@ -258,7 +261,14 @@ namespace project
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (comboBox1.SelectedItem != null)
+            {
+                DataRowView selectedRow = comboBox1.SelectedItem as DataRowView;
+                if (selectedRow != null)
+                {
+                    trainerId= Convert.ToInt32(selectedRow["trainerID"]);
+                }
+            }
         }
 
         private void Home_Click_1(object sender, EventArgs e)
@@ -289,6 +299,61 @@ namespace project
         {
             this.Hide();
             BookTrainingSession form = new BookTrainingSession(userId);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void radioButton30_CheckedChanged_1(object sender, EventArgs e)
+        {
+            rating = 5;
+        }
+
+        private void groupBox1_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton29_CheckedChanged_2(object sender, EventArgs e)
+        {
+            rating = 4;
+        }
+
+        private void radioButton28_CheckedChanged_2(object sender, EventArgs e)
+        {
+            rating = 3;
+        }
+
+        private void radioButton27_CheckedChanged_1(object sender, EventArgs e)
+        {
+            rating = 2;
+        }
+
+        private void radioButton26_CheckedChanged(object sender, EventArgs e)
+        {
+            rating = 1;
+        }
+
+        private void radioButton6_CheckedChanged_1(object sender, EventArgs e)
+        {
+            help = 1;
+        }
+
+        private void radioButton11_CheckedChanged_1(object sender, EventArgs e)
+        {
+        }
+
+        private void workoutplanreport_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            WorkoutPlanReport form = new WorkoutPlanReport(userId);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void dietplanreport_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DietPlanReport form = new DietPlanReport(userId);
             form.Show();
             form.FormClosed += (s, argc) => this.Close();
         }

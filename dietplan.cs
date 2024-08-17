@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace project
 {
@@ -40,7 +41,8 @@ namespace project
 
         private void Approve1_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+            SqlConnection conn = new SqlConnection(conString);//connection string 
             conn.Open();
             SqlCommand cm, cm2, cm3, cm4;
             int memberID = this.userId;
@@ -163,7 +165,8 @@ namespace project
 
         private void button3_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+            SqlConnection conn = new SqlConnection(conString);//connection string 
             conn.Open();
             SqlCommand cm;
             int memberID = userId;
@@ -172,8 +175,8 @@ namespace project
             mealIDForAllergens = Convert.ToInt32(cm.ExecuteScalar()); // Get the newly generated mealID
             cm.Dispose();
             SqlCommand cm3;
-            label14.Text = mealAllergens.ToString();
-            label15.Text = mealIDForAllergens.ToString();
+            //label14.Text = mealAllergens.ToString();
+            //label15.Text = mealIDForAllergens.ToString();
             string query3 = "insert into Allergens values('" + mealAllergens + "'," + mealIDForAllergens + ")";
             cm3 = new SqlCommand(query3, conn);
             cm3.ExecuteNonQuery();
@@ -183,7 +186,9 @@ namespace project
         }
         private void LoadComboBoxDataWithMeal()
         {
-            using (SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+            using (SqlConnection conn = new SqlConnection(conString))
             {
                 string query = "SELECT * FROM Meals";
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -233,6 +238,10 @@ namespace project
 
         private void createdietplan_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            dietplan form = new dietplan(userId);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
         }
 
         private void booktrainingsession_Click_1(object sender, EventArgs e)
@@ -247,6 +256,30 @@ namespace project
         {
             this.Hide();
             FeedbackMember form = new FeedbackMember(userId);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void Home_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            member form = new member(userId);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void workoutplanreport_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            WorkoutPlanReport form = new WorkoutPlanReport(userId);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void dietplanreport_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DietPlanReport form = new DietPlanReport(userId);
             form.Show();
             form.FormClosed += (s, argc) => this.Close();
         }

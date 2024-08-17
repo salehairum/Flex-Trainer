@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace project
 {
@@ -80,7 +81,7 @@ namespace project
 
         private void LoadComboBoxDataWithMemberID()
         {
-            using (SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;using (SqlConnection conn = new SqlConnection(conString))
             {
                 string query = "SELECT memberID FROM Member";
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);
@@ -109,7 +110,7 @@ namespace project
         private void done_Click(object sender, EventArgs e)
         {
             
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;SqlConnection conn = new SqlConnection(conString);
 
             try
             {
@@ -176,6 +177,38 @@ namespace project
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Account Deactivated");
+        }
+
+        private void createdietplan_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            RemoveMember form = new RemoveMember(gymOwnerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void dietplanreport_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddTrainer form = new AddTrainer(gymOwnerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void booktrainingsession_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            RemoveTrainer form = new RemoveTrainer(gymOwnerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void givefeedback_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            registerGym form = new registerGym(gymOwnerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
         }
     }
 }

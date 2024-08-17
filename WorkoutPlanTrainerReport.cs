@@ -13,9 +13,11 @@ namespace project
 {
     public partial class WorkoutPlanTrainerReport : Form
     {
-        public WorkoutPlanTrainerReport()
+        int memberId;
+        public WorkoutPlanTrainerReport(int userId)
         {
             InitializeComponent();
+            memberId = userId;
         }
 
         private void LoadComboBoxDataWithPurposes()
@@ -308,6 +310,62 @@ namespace project
                     }
                 }
             }
+        }
+
+        private void Home_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            trainer form = new trainer(memberId);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void createworkoutplan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Trainer_Workout_Plan form = new Trainer_Workout_Plan(memberId);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void workoutplanreport_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Trainer_Workout_Plan form = new Trainer_Workout_Plan();
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void createdietplan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            dietplanTrainer form = new dietplanTrainer(memberId);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void dietplanreport_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DietPlanTrainerReport form = new DietPlanTrainerReport(memberId);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void booktrainingsession_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TrainingSessionRequest form = new TrainingSessionRequest(memberId);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void givefeedback_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FeedbackTrainer form = new FeedbackTrainer(memberId);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
         }
     }
 }

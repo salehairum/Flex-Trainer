@@ -33,23 +33,14 @@ namespace project
             this.Reject1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.givefeedback = new System.Windows.Forms.Button();
-            this.createworkoutplan = new System.Windows.Forms.Button();
-            this.Home = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.name = new System.Windows.Forms.Panel();
             this.logo = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.name.SuspendLayout();
@@ -105,144 +96,15 @@ namespace project
             this.label3.TabIndex = 195;
             this.label3.Text = "Additional Report 6";
             // 
-            // panel5
-            // 
-            this.panel5.BackgroundImage = global::project.Properties.Resources.seo_report;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Location = new System.Drawing.Point(4, 559);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(35, 40);
-            this.panel5.TabIndex = 150;
-            // 
-            // panel4
-            // 
-            this.panel4.BackgroundImage = global::project.Properties.Resources.remove;
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Location = new System.Drawing.Point(14, 487);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(28, 31);
-            this.panel4.TabIndex = 132;
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(4, 545);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(357, 66);
-            this.button2.TabIndex = 151;
-            this.button2.Text = "View General Reports";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(-2, 471);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(361, 66);
-            this.button1.TabIndex = 131;
-            this.button1.Text = "Remove Gym";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = global::project.Properties.Resources.statistics;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(14, 337);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(28, 31);
-            this.panel3.TabIndex = 130;
-            // 
-            // panel11
-            // 
-            this.panel11.BackgroundImage = global::project.Properties.Resources.write;
-            this.panel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel11.Location = new System.Drawing.Point(14, 413);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(28, 31);
-            this.panel11.TabIndex = 78;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(115)))), ((int)(((byte)(103)))));
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel11);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.givefeedback);
-            this.panel1.Controls.Add(this.createworkoutplan);
-            this.panel1.Controls.Add(this.Home);
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Location = new System.Drawing.Point(0, 27);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(361, 779);
             this.panel1.TabIndex = 196;
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::project.Properties.Resources.house;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(14, 263);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(28, 31);
-            this.panel2.TabIndex = 77;
-            // 
-            // givefeedback
-            // 
-            this.givefeedback.FlatAppearance.BorderSize = 0;
-            this.givefeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.givefeedback.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.givefeedback.ForeColor = System.Drawing.Color.White;
-            this.givefeedback.Location = new System.Drawing.Point(-3, 397);
-            this.givefeedback.Margin = new System.Windows.Forms.Padding(4);
-            this.givefeedback.Name = "givefeedback";
-            this.givefeedback.Size = new System.Drawing.Size(361, 66);
-            this.givefeedback.TabIndex = 125;
-            this.givefeedback.Text = "Approve Gym Requests";
-            this.givefeedback.UseVisualStyleBackColor = true;
-            // 
-            // createworkoutplan
-            // 
-            this.createworkoutplan.FlatAppearance.BorderSize = 0;
-            this.createworkoutplan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.createworkoutplan.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createworkoutplan.ForeColor = System.Drawing.Color.White;
-            this.createworkoutplan.Location = new System.Drawing.Point(14, 323);
-            this.createworkoutplan.Margin = new System.Windows.Forms.Padding(4);
-            this.createworkoutplan.Name = "createworkoutplan";
-            this.createworkoutplan.Size = new System.Drawing.Size(361, 66);
-            this.createworkoutplan.TabIndex = 125;
-            this.createworkoutplan.Text = "Gym Reports";
-            this.createworkoutplan.UseVisualStyleBackColor = true;
-            // 
-            // Home
-            // 
-            this.Home.FlatAppearance.BorderSize = 0;
-            this.Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Home.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home.ForeColor = System.Drawing.Color.White;
-            this.Home.Location = new System.Drawing.Point(-1, 249);
-            this.Home.Margin = new System.Windows.Forms.Padding(4);
-            this.Home.Name = "Home";
-            this.Home.Size = new System.Drawing.Size(357, 66);
-            this.Home.TabIndex = 124;
-            this.Home.Text = "Home";
-            this.Home.UseVisualStyleBackColor = true;
             // 
             // label25
             // 
@@ -312,6 +174,22 @@ namespace project
             this.label1.TabIndex = 199;
             this.label1.Text = "Details meals classified by type";
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(115)))), ((int)(((byte)(103)))));
+            this.button3.Location = new System.Drawing.Point(61, 411);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(227, 39);
+            this.button3.TabIndex = 204;
+            this.button3.Text = "Back";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // AReport6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -344,22 +222,13 @@ namespace project
         private System.Windows.Forms.Button Reject1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button givefeedback;
-        private System.Windows.Forms.Button createworkoutplan;
-        private System.Windows.Forms.Button Home;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel name;
         private System.Windows.Forms.Panel logo;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button3;
     }
 }

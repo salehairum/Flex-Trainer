@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace project
 {
@@ -70,7 +71,9 @@ namespace project
 
         private void Approve1_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+            SqlConnection conn = new SqlConnection(conString);//connection string 
             conn.Open();
             SqlCommand cm, cm2, cm3, cm4;
             int trainerID = this.userId;
@@ -94,7 +97,9 @@ namespace project
 
         private void LoadComboBoxDataWithMeal()
         {
-            using (SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+            using (SqlConnection conn = new SqlConnection(conString))//connection string 
             {
                 string query = "SELECT * FROM Meals";
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -195,7 +200,9 @@ namespace project
 
         private void button3_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+            SqlConnection conn = new SqlConnection(conString);//connection string 
             conn.Open();
             SqlCommand cm;
             int trainerID = userId;
@@ -221,7 +228,50 @@ namespace project
 
         private void createworkoutplan_Click_1(object sender, EventArgs e)
         {
+            this.Hide();
+            Trainer_Workout_Plan form = new Trainer_Workout_Plan(userId);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
 
+        private void workoutplanreport_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            WorkoutPlanTrainerReport form = new WorkoutPlanTrainerReport(userId);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void createdietplan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            dietplanTrainer form = new dietplanTrainer(userId);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void dietplanreport_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DietPlanTrainerReport form = new DietPlanTrainerReport(userId);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void booktrainingsession_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            TrainingSessionRequest form = new TrainingSessionRequest(userId);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void givefeedback_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FeedbackTrainer form = new FeedbackTrainer(userId);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
         }
     }
 }

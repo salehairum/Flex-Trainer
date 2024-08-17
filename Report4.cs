@@ -16,8 +16,10 @@ namespace project
         int gymID;
         string MachineName;
         string day;
-        public Report4()
+        int AdminID;
+        public Report4(int userId)
         {
+            AdminID = userId;
             InitializeComponent();
             LoadComboBoxDataWithGymID();
             LoadComboBoxDataWithMachineName();
@@ -135,6 +137,19 @@ namespace project
             {
                 MachineName = comboBox2.SelectedItem.ToString();
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            viewForms form = new viewForms(AdminID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

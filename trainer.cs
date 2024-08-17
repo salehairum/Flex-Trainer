@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace project
 {
@@ -24,7 +25,7 @@ namespace project
 
         private void trainer_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;SqlConnection conn = new SqlConnection(conString);
             conn.Open();
             string dob;
             SqlCommand cm1, cm2;
@@ -51,33 +52,33 @@ namespace project
         private void createworkoutplan_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Trainer_Workout_Plan form = new Trainer_Workout_Plan();
+            Trainer_Workout_Plan form = new Trainer_Workout_Plan(trainerID);
             form.Show();
             form.FormClosed += (s, argc) => this.Close();
         }
 
         private void workoutplanreport_Click(object sender, EventArgs e)
         {
-            Hide();
-            using (report form = new report())
-                form.ShowDialog();
-            Show();
+            this.Hide();
+            WorkoutPlanTrainerReport form = new WorkoutPlanTrainerReport(trainerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
         }
 
         private void createdietplan_Click(object sender, EventArgs e)
         {
             this.Hide();
-            dietplanTrainer form = new dietplanTrainer();
+            dietplanTrainer form = new dietplanTrainer(trainerID);
             form.Show();
             form.FormClosed += (s, argc) => this.Close();
         }
 
         private void dietplanreport_Click(object sender, EventArgs e)
         {
-            Hide();
-            using (report form = new report())
-                form.ShowDialog();
-            Show();
+            this.Hide();
+            DietPlanTrainerReport form = new DietPlanTrainerReport(trainerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
         }
 
         private void booktrainingsession_Click(object sender, EventArgs e)

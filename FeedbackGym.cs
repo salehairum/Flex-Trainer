@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using System.Configuration;
 
 namespace project
 {
@@ -28,7 +28,9 @@ namespace project
         }
         private void LoadLabelsWithData()
         {
-            using (SqlConnection conn = new SqlConnection("Data Source=DESKTOP-E85OBQM\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+            using (SqlConnection conn = new SqlConnection(conString))
             {
                 conn.Open();
                 string query = "select avg(FeedbackTrainer.rating),avg(FeedbackTrainer.discipline),avg(FeedbackTrainer.help) from FeedbackTrainer inner join Trainer on Trainer.trainerID=FeedbackTrainer.trainerID inner join trainerJoinsGym on Trainer.trainerID=trainerJoinsGym.trainerId where trainerJoinsGym.gymId=" + gymID;
@@ -70,7 +72,9 @@ namespace project
 
         private void LoadComboBoxDataWithGymID()
         {
-            using (SqlConnection conn = new SqlConnection("Data Source=DESKTOP-E85OBQM\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+            using (SqlConnection conn = new SqlConnection(conString))
             {
                 string query = "SELECT gymID FROM gym where gymownerid="+gymOwnerId;
                 SqlCommand cmd = new SqlCommand(query, conn);

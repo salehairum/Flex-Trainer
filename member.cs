@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace project
 {
@@ -27,7 +28,7 @@ namespace project
 
         private void member_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;SqlConnection conn = new SqlConnection(conString);
             conn.Open();
             string dob;
             SqlCommand cm1, cm2, cm3, cm4;
@@ -134,7 +135,7 @@ namespace project
         private void workoutplanreport_Click(object sender, EventArgs e)
         {
             this.Hide();
-            WorkoutPlanReport form = new WorkoutPlanReport();
+            WorkoutPlanReport form = new WorkoutPlanReport(userId);
             form.Show();
             form.FormClosed += (s, argc) => this.Close();
         }
@@ -157,7 +158,10 @@ namespace project
 
         private void dietplanreport_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            DietPlanReport form = new DietPlanReport(userId);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
         }
 
         private void panel8_Paint(object sender, PaintEventArgs e)

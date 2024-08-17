@@ -75,29 +75,29 @@
             this.panel1.Controls.Add(this.createworkoutplan);
             this.panel1.Controls.Add(this.Home);
             this.panel1.Location = new System.Drawing.Point(1, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(277, 750);
+            this.panel1.Size = new System.Drawing.Size(369, 923);
             this.panel1.TabIndex = 5;
             // 
             // panel5
             // 
             this.panel5.BackgroundImage = global::project.Properties.Resources.seo_report;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Location = new System.Drawing.Point(9, 529);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel5.Location = new System.Drawing.Point(12, 651);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(26, 32);
+            this.panel5.Size = new System.Drawing.Size(35, 39);
             this.panel5.TabIndex = 135;
             // 
             // panel4
             // 
             this.panel4.BackgroundImage = global::project.Properties.Resources.remove;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Location = new System.Drawing.Point(17, 470);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel4.Location = new System.Drawing.Point(23, 578);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(21, 25);
+            this.panel4.Size = new System.Drawing.Size(28, 31);
             this.panel4.TabIndex = 140;
             // 
             // button4
@@ -106,9 +106,10 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(9, 518);
+            this.button4.Location = new System.Drawing.Point(12, 638);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(268, 54);
+            this.button4.Size = new System.Drawing.Size(357, 66);
             this.button4.TabIndex = 136;
             this.button4.Text = "View General Reports";
             this.button4.UseVisualStyleBackColor = true;
@@ -120,41 +121,43 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(5, 457);
+            this.button3.Location = new System.Drawing.Point(7, 562);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(271, 54);
+            this.button3.Size = new System.Drawing.Size(361, 66);
             this.button3.TabIndex = 139;
             this.button3.Text = "Remove Gym";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel3
             // 
             this.panel3.BackgroundImage = global::project.Properties.Resources.statistics;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(17, 349);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel3.Location = new System.Drawing.Point(23, 430);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(21, 25);
+            this.panel3.Size = new System.Drawing.Size(28, 31);
             this.panel3.TabIndex = 138;
             // 
             // panel11
             // 
             this.panel11.BackgroundImage = global::project.Properties.Resources.write;
             this.panel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel11.Location = new System.Drawing.Point(17, 410);
-            this.panel11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel11.Location = new System.Drawing.Point(23, 505);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(21, 25);
+            this.panel11.Size = new System.Drawing.Size(28, 31);
             this.panel11.TabIndex = 134;
             // 
             // panel2
             // 
             this.panel2.BackgroundImage = global::project.Properties.Resources.house;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(17, 288);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(23, 354);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(21, 25);
+            this.panel2.Size = new System.Drawing.Size(28, 31);
             this.panel2.TabIndex = 133;
             // 
             // givefeedback
@@ -163,12 +166,14 @@
             this.givefeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.givefeedback.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.givefeedback.ForeColor = System.Drawing.Color.White;
-            this.givefeedback.Location = new System.Drawing.Point(4, 397);
+            this.givefeedback.Location = new System.Drawing.Point(5, 489);
+            this.givefeedback.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.givefeedback.Name = "givefeedback";
-            this.givefeedback.Size = new System.Drawing.Size(271, 54);
+            this.givefeedback.Size = new System.Drawing.Size(361, 66);
             this.givefeedback.TabIndex = 136;
             this.givefeedback.Text = "Approve Gym Requests";
             this.givefeedback.UseVisualStyleBackColor = true;
+            this.givefeedback.Click += new System.EventHandler(this.givefeedback_Click_1);
             // 
             // createworkoutplan
             // 
@@ -176,12 +181,14 @@
             this.createworkoutplan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createworkoutplan.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createworkoutplan.ForeColor = System.Drawing.Color.White;
-            this.createworkoutplan.Location = new System.Drawing.Point(17, 337);
+            this.createworkoutplan.Location = new System.Drawing.Point(23, 415);
+            this.createworkoutplan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.createworkoutplan.Name = "createworkoutplan";
-            this.createworkoutplan.Size = new System.Drawing.Size(271, 54);
+            this.createworkoutplan.Size = new System.Drawing.Size(361, 66);
             this.createworkoutplan.TabIndex = 137;
             this.createworkoutplan.Text = "Gym Reports";
             this.createworkoutplan.UseVisualStyleBackColor = true;
+            this.createworkoutplan.Click += new System.EventHandler(this.createworkoutplan_Click);
             // 
             // Home
             // 
@@ -189,12 +196,14 @@
             this.Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Home.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Home.ForeColor = System.Drawing.Color.White;
-            this.Home.Location = new System.Drawing.Point(6, 277);
+            this.Home.Location = new System.Drawing.Point(8, 341);
+            this.Home.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Home.Name = "Home";
-            this.Home.Size = new System.Drawing.Size(268, 54);
+            this.Home.Size = new System.Drawing.Size(357, 66);
             this.Home.TabIndex = 135;
             this.Home.Text = "Home";
             this.Home.UseVisualStyleBackColor = true;
+            this.Home.Click += new System.EventHandler(this.Home_Click_1);
             // 
             // groupBox1
             // 
@@ -202,9 +211,11 @@
             this.groupBox1.Controls.Add(this.checkBox3);
             this.groupBox1.Controls.Add(this.checkBox2);
             this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Location = new System.Drawing.Point(478, 278);
+            this.groupBox1.Location = new System.Drawing.Point(637, 342);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(591, 203);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(788, 250);
             this.groupBox1.TabIndex = 73;
             this.groupBox1.TabStop = false;
             // 
@@ -213,9 +224,10 @@
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(57)))), ((int)(((byte)(52)))));
-            this.checkBox3.Location = new System.Drawing.Point(66, 129);
+            this.checkBox3.Location = new System.Drawing.Point(88, 159);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(301, 47);
+            this.checkBox3.Size = new System.Drawing.Size(365, 58);
             this.checkBox3.TabIndex = 2;
             this.checkBox3.Text = "Continous Poor Performance";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -225,9 +237,10 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(57)))), ((int)(((byte)(52)))));
-            this.checkBox2.Location = new System.Drawing.Point(66, 76);
+            this.checkBox2.Location = new System.Drawing.Point(88, 94);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(149, 47);
+            this.checkBox2.Size = new System.Drawing.Size(184, 58);
             this.checkBox2.TabIndex = 1;
             this.checkBox2.Text = "Legal Issues";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -237,9 +250,10 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(57)))), ((int)(((byte)(52)))));
-            this.checkBox1.Location = new System.Drawing.Point(66, 23);
+            this.checkBox1.Location = new System.Drawing.Point(88, 28);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(382, 47);
+            this.checkBox1.Size = new System.Drawing.Size(462, 58);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Non-compliance Franchise Standards";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -249,9 +263,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Javanese Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(555, 141);
+            this.label3.Location = new System.Drawing.Point(740, 174);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(435, 47);
+            this.label3.Size = new System.Drawing.Size(558, 62);
             this.label3.TabIndex = 72;
             this.label3.Text = "Removing Gym with gymID from Network";
             // 
@@ -260,9 +275,10 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Javanese Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(662, 228);
+            this.label9.Location = new System.Drawing.Point(883, 281);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(217, 47);
+            this.label9.Size = new System.Drawing.Size(276, 62);
             this.label9.TabIndex = 71;
             this.label9.Text = "Reason for Removal";
             // 
@@ -271,8 +287,9 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(115)))), ((int)(((byte)(103)))));
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1028, 27);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1371, 33);
             this.flowLayoutPanel1.TabIndex = 76;
             // 
             // name
@@ -280,19 +297,20 @@
             this.name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(115)))), ((int)(((byte)(103)))));
             this.name.Controls.Add(this.logo);
             this.name.Controls.Add(this.label25);
-            this.name.Location = new System.Drawing.Point(307, 0);
+            this.name.Location = new System.Drawing.Point(409, 0);
+            this.name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(119, 119);
+            this.name.Size = new System.Drawing.Size(159, 146);
             this.name.TabIndex = 121;
             // 
             // logo
             // 
             this.logo.BackgroundImage = global::project.Properties.Resources.icon3;
             this.logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.logo.Location = new System.Drawing.Point(17, 8);
+            this.logo.Location = new System.Drawing.Point(23, 10);
             this.logo.Margin = new System.Windows.Forms.Padding(0);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(82, 79);
+            this.logo.Size = new System.Drawing.Size(109, 97);
             this.logo.TabIndex = 3;
             // 
             // label25
@@ -300,9 +318,10 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(3, 87);
+            this.label25.Location = new System.Drawing.Point(4, 107);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(116, 22);
+            this.label25.Size = new System.Drawing.Size(147, 28);
             this.label25.TabIndex = 0;
             this.label25.Text = "Flex Trainer";
             // 
@@ -311,9 +330,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Javanese Text", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(432, 46);
+            this.label1.Location = new System.Drawing.Point(576, 57);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 73);
+            this.label1.Size = new System.Drawing.Size(279, 91);
             this.label1.TabIndex = 122;
             this.label1.Text = "Remove Gym";
             // 
@@ -325,9 +345,10 @@
             this.done.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.done.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.done.ForeColor = System.Drawing.Color.White;
-            this.done.Location = new System.Drawing.Point(478, 500);
+            this.done.Location = new System.Drawing.Point(637, 615);
+            this.done.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.done.Name = "done";
-            this.done.Size = new System.Drawing.Size(286, 41);
+            this.done.Size = new System.Drawing.Size(381, 50);
             this.done.TabIndex = 123;
             this.done.Text = "Permanently delete account";
             this.done.UseVisualStyleBackColor = false;
@@ -341,9 +362,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(783, 500);
+            this.button2.Location = new System.Drawing.Point(1044, 615);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(286, 41);
+            this.button2.Size = new System.Drawing.Size(381, 50);
             this.button2.TabIndex = 124;
             this.button2.Text = "Temporarily deactivate account";
             this.button2.UseVisualStyleBackColor = false;
@@ -356,9 +378,10 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(744, 614);
+            this.button1.Location = new System.Drawing.Point(992, 756);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(62, 33);
+            this.button1.Size = new System.Drawing.Size(83, 41);
             this.button1.TabIndex = 125;
             this.button1.Text = " Back ";
             this.button1.UseVisualStyleBackColor = false;
@@ -369,27 +392,29 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Javanese Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Yellow;
-            this.label2.Location = new System.Drawing.Point(662, 181);
+            this.label2.Location = new System.Drawing.Point(883, 223);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 47);
+            this.label2.Size = new System.Drawing.Size(129, 62);
             this.label2.TabIndex = 126;
             this.label2.Text = "GymId: ";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(767, 191);
+            this.comboBox1.Location = new System.Drawing.Point(1023, 235);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(95, 21);
+            this.comboBox1.Size = new System.Drawing.Size(125, 24);
             this.comboBox1.TabIndex = 127;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // removeGym
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(57)))), ((int)(((byte)(52)))));
-            this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.ClientSize = new System.Drawing.Size(1371, 750);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
@@ -403,6 +428,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "removeGym";
             this.Text = "removeGym";
             this.Load += new System.EventHandler(this.removeGym_Load);

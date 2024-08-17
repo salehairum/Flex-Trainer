@@ -193,6 +193,7 @@ namespace project
             this.button4.TabIndex = 144;
             this.button4.Text = "View General Reports";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel4
             // 
@@ -217,6 +218,7 @@ namespace project
             this.button5.TabIndex = 141;
             this.button5.Text = "Remove Gym";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel3
             // 
@@ -261,6 +263,7 @@ namespace project
             this.givefeedback.TabIndex = 138;
             this.givefeedback.Text = "Approve Gym Requests";
             this.givefeedback.UseVisualStyleBackColor = true;
+            this.givefeedback.Click += new System.EventHandler(this.givefeedback_Click);
             // 
             // createworkoutplan
             // 
@@ -275,6 +278,7 @@ namespace project
             this.createworkoutplan.TabIndex = 139;
             this.createworkoutplan.Text = "Gym Reports";
             this.createworkoutplan.UseVisualStyleBackColor = true;
+            this.createworkoutplan.Click += new System.EventHandler(this.createworkoutplan_Click);
             // 
             // Home
             // 
@@ -289,6 +293,7 @@ namespace project
             this.Home.TabIndex = 137;
             this.Home.Text = "Home";
             this.Home.UseVisualStyleBackColor = true;
+            this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
             // contextMenuStrip1
             // 

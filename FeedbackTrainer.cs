@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace project
 {
@@ -56,7 +57,9 @@ namespace project
 
         private void LoadComboBoxDataWithMember()
         {
-            using (SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+            using (SqlConnection conn = new SqlConnection(conString))
             {
                 string query = "SELECT member.memberID,member.mName FROM FeedbackTrainer inner join Member on FeedbackTrainer.memberID=member.memberID where FeedbackTrainer.trainerID=" + userID;
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -143,7 +146,8 @@ namespace project
                 }
                 memberID = Convert.ToInt32(temp);
             }
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+            SqlConnection conn = new SqlConnection(conString);//connection string 
             conn.Open();
             string query = "SELECT member.memberID,member.mName,FeedbackTrainer.rating,FeedbackTrainer.help,FeedbackTrainer.discipline,FeedbackTrainer.comment FROM FeedbackTrainer inner join Member on FeedbackTrainer.memberID=member.memberID where FeedbackTrainer.trainerID=" + userID + " and Member.memberID=" + memberID;
             SqlCommand cmd = new SqlCommand(query, conn);
@@ -173,6 +177,62 @@ namespace project
 
             conn.Close();
 
+        }
+
+        private void Home_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            trainer form = new trainer(userID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void createworkoutplan_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Trainer_Workout_Plan form = new Trainer_Workout_Plan(userID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void workoutplanreport_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            WorkoutPlanTrainerReport form = new WorkoutPlanTrainerReport(userID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void createdietplan_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            dietplanTrainer form = new dietplanTrainer(userID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void dietplanreport_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DietPlanTrainerReport form = new DietPlanTrainerReport(userID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void booktrainingsession_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            TrainingSessionRequest form = new TrainingSessionRequest(userID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void givefeedback_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FeedbackTrainer form = new FeedbackTrainer(userID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
         }
     }
 }

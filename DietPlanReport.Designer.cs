@@ -239,6 +239,7 @@ namespace project
             this.givefeedback.TabIndex = 125;
             this.givefeedback.Text = "Give Feedback";
             this.givefeedback.UseVisualStyleBackColor = true;
+            this.givefeedback.Click += new System.EventHandler(this.givefeedback_Click);
             // 
             // booktrainingsession
             // 
@@ -253,6 +254,7 @@ namespace project
             this.booktrainingsession.TabIndex = 128;
             this.booktrainingsession.Text = "Book Training Session";
             this.booktrainingsession.UseVisualStyleBackColor = true;
+            this.booktrainingsession.Click += new System.EventHandler(this.booktrainingsession_Click);
             // 
             // createdietplan
             // 
@@ -267,6 +269,7 @@ namespace project
             this.createdietplan.TabIndex = 127;
             this.createdietplan.Text = "Create Diet Plan";
             this.createdietplan.UseVisualStyleBackColor = true;
+            this.createdietplan.Click += new System.EventHandler(this.createdietplan_Click);
             // 
             // comboBox4
             // 
@@ -291,6 +294,7 @@ namespace project
             this.button1.TabIndex = 125;
             this.button1.Text = "Diet Plan Report";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -317,6 +321,7 @@ namespace project
             this.button4.TabIndex = 126;
             this.button4.Text = "Workout Plan Report";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Approve1
             // 
@@ -349,6 +354,7 @@ namespace project
             this.createworkoutplan.TabIndex = 125;
             this.createworkoutplan.Text = "Create Workout Plan";
             this.createworkoutplan.UseVisualStyleBackColor = true;
+            this.createworkoutplan.Click += new System.EventHandler(this.createworkoutplan_Click);
             // 
             // Home
             // 
@@ -363,6 +369,7 @@ namespace project
             this.Home.TabIndex = 124;
             this.Home.Text = "Home";
             this.Home.UseVisualStyleBackColor = true;
+            this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
             // textBox4
             // 

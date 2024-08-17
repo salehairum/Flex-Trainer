@@ -10,6 +10,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace project
 {
@@ -32,7 +33,7 @@ namespace project
         int totalRecords = 0; // Stores the total number of records
         private void registerGymAdmin_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;SqlConnection conn = new SqlConnection(conString);//connection string 
             conn.Open();
 
             string query = "SELECT * FROM GymOwnerAppliesForGymReg";
@@ -97,7 +98,7 @@ namespace project
 
         private void Reject1_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;SqlConnection conn = new SqlConnection(conString);
             conn.Open();
             string query1 = "delete from GymOwnerAppliesForGymReg where gymownerID = @id";
             using (SqlCommand cmd = new SqlCommand(query1, conn))
@@ -133,7 +134,7 @@ namespace project
         {
 
             this.Hide();
-            viewForms form = new viewForms();
+            viewForms form = new viewForms(AdminID);
             form.Show();
             form.FormClosed += (s, argc) => this.Close();
         }
@@ -145,7 +146,7 @@ namespace project
 
         private void Approve1_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;SqlConnection conn = new SqlConnection(conString);
             conn.Open();
             string query1 = "INSERT INTO Gym (gLocation, businessPlan, size, nActiveMembers, budget, gymOwnerID) VALUES (@gymloc, @plan, @size, @activemems, @budget, @gymownerId)";
 
@@ -171,6 +172,38 @@ namespace project
 
             this.Hide();
             admin form = new admin(AdminID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void Home_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            admin form = new admin(AdminID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void createworkoutplan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            GymReport form = new GymReport(AdminID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void givefeedback_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            registerGymAdmin form = new registerGymAdmin(AdminID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            removeGym form = new removeGym(AdminID);
             form.Show();
             form.FormClosed += (s, argc) => this.Close();
         }

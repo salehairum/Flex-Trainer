@@ -87,9 +87,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Javanese Text", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(434, 55);
+            this.label1.Location = new System.Drawing.Point(579, 68);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(361, 73);
+            this.label1.Size = new System.Drawing.Size(447, 91);
             this.label1.TabIndex = 2;
             this.label1.Text = "Submit Your Feedback";
             // 
@@ -97,9 +98,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Javanese Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(305, 228);
+            this.label2.Location = new System.Drawing.Point(407, 281);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 62);
+            this.label2.Size = new System.Drawing.Size(136, 78);
             this.label2.TabIndex = 3;
             this.label2.Text = "Rating";
             // 
@@ -107,9 +109,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Javanese Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(305, 310);
+            this.label4.Location = new System.Drawing.Point(407, 382);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 62);
+            this.label4.Size = new System.Drawing.Size(108, 78);
             this.label4.TabIndex = 18;
             this.label4.Text = "Help";
             // 
@@ -117,9 +120,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Javanese Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(305, 392);
+            this.label5.Location = new System.Drawing.Point(407, 482);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(155, 62);
+            this.label5.Size = new System.Drawing.Size(192, 78);
             this.label5.TabIndex = 24;
             this.label5.Text = "Discipline";
             // 
@@ -127,9 +131,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Javanese Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(305, 475);
+            this.label9.Location = new System.Drawing.Point(407, 585);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(160, 62);
+            this.label9.Size = new System.Drawing.Size(198, 78);
             this.label9.TabIndex = 48;
             this.label9.Text = "Comments";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -139,9 +144,10 @@
             this.richTextBox1.BackColor = System.Drawing.Color.MintCream;
             this.richTextBox1.Font = new System.Drawing.Font("Javanese Text", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(115)))), ((int)(((byte)(103)))));
-            this.richTextBox1.Location = new System.Drawing.Point(474, 466);
+            this.richTextBox1.Location = new System.Drawing.Point(632, 574);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(682, 95);
+            this.richTextBox1.Size = new System.Drawing.Size(908, 116);
             this.richTextBox1.TabIndex = 50;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged_1);
@@ -164,9 +170,9 @@
             this.panel1.Controls.Add(this.createworkoutplan);
             this.panel1.Controls.Add(this.Home);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(275, 755);
+            this.panel1.Size = new System.Drawing.Size(367, 929);
             this.panel1.TabIndex = 52;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
@@ -174,70 +180,70 @@
             // 
             this.panel2.BackgroundImage = global::project.Properties.Resources.planning;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(19, 210);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(25, 258);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(21, 37);
+            this.panel2.Size = new System.Drawing.Size(28, 46);
             this.panel2.TabIndex = 135;
             // 
             // panel11
             // 
             this.panel11.BackgroundImage = global::project.Properties.Resources.feedback;
             this.panel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel11.Location = new System.Drawing.Point(20, 514);
-            this.panel11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel11.Location = new System.Drawing.Point(27, 633);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(21, 25);
+            this.panel11.Size = new System.Drawing.Size(28, 31);
             this.panel11.TabIndex = 131;
             // 
             // panel7
             // 
             this.panel7.BackgroundImage = global::project.Properties.Resources.appointment;
             this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel7.Location = new System.Drawing.Point(19, 466);
-            this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel7.Location = new System.Drawing.Point(25, 574);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(21, 25);
+            this.panel7.Size = new System.Drawing.Size(28, 31);
             this.panel7.TabIndex = 132;
             // 
             // panel6
             // 
             this.panel6.BackgroundImage = global::project.Properties.Resources.statistics;
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel6.Location = new System.Drawing.Point(20, 408);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel6.Location = new System.Drawing.Point(27, 502);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(21, 25);
+            this.panel6.Size = new System.Drawing.Size(28, 31);
             this.panel6.TabIndex = 133;
             // 
             // panel5
             // 
             this.panel5.BackgroundImage = global::project.Properties.Resources.planning;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Location = new System.Drawing.Point(20, 330);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel5.Location = new System.Drawing.Point(27, 406);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(21, 41);
+            this.panel5.Size = new System.Drawing.Size(28, 50);
             this.panel5.TabIndex = 134;
             // 
             // panel8
             // 
             this.panel8.BackgroundImage = global::project.Properties.Resources.statistics;
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel8.Location = new System.Drawing.Point(19, 283);
-            this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel8.Location = new System.Drawing.Point(25, 348);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(21, 25);
+            this.panel8.Size = new System.Drawing.Size(28, 31);
             this.panel8.TabIndex = 143;
             // 
             // panel9
             // 
             this.panel9.BackgroundImage = global::project.Properties.Resources.house;
             this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel9.Location = new System.Drawing.Point(20, 162);
-            this.panel9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel9.Location = new System.Drawing.Point(27, 199);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(21, 25);
+            this.panel9.Size = new System.Drawing.Size(28, 31);
             this.panel9.TabIndex = 130;
             // 
             // givefeedback
@@ -246,9 +252,10 @@
             this.givefeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.givefeedback.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.givefeedback.ForeColor = System.Drawing.Color.White;
-            this.givefeedback.Location = new System.Drawing.Point(8, 509);
+            this.givefeedback.Location = new System.Drawing.Point(11, 626);
+            this.givefeedback.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.givefeedback.Name = "givefeedback";
-            this.givefeedback.Size = new System.Drawing.Size(271, 54);
+            this.givefeedback.Size = new System.Drawing.Size(361, 66);
             this.givefeedback.TabIndex = 137;
             this.givefeedback.Text = "Give Feedback";
             this.givefeedback.UseVisualStyleBackColor = true;
@@ -259,9 +266,10 @@
             this.booktrainingsession.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.booktrainingsession.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.booktrainingsession.ForeColor = System.Drawing.Color.White;
-            this.booktrainingsession.Location = new System.Drawing.Point(8, 449);
+            this.booktrainingsession.Location = new System.Drawing.Point(11, 553);
+            this.booktrainingsession.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.booktrainingsession.Name = "booktrainingsession";
-            this.booktrainingsession.Size = new System.Drawing.Size(268, 54);
+            this.booktrainingsession.Size = new System.Drawing.Size(357, 66);
             this.booktrainingsession.TabIndex = 142;
             this.booktrainingsession.Text = "Book Training Session";
             this.booktrainingsession.UseVisualStyleBackColor = true;
@@ -273,12 +281,14 @@
             this.dietplanreport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dietplanreport.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dietplanreport.ForeColor = System.Drawing.Color.White;
-            this.dietplanreport.Location = new System.Drawing.Point(8, 390);
+            this.dietplanreport.Location = new System.Drawing.Point(11, 480);
+            this.dietplanreport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dietplanreport.Name = "dietplanreport";
-            this.dietplanreport.Size = new System.Drawing.Size(271, 54);
+            this.dietplanreport.Size = new System.Drawing.Size(361, 66);
             this.dietplanreport.TabIndex = 138;
             this.dietplanreport.Text = "Diet Plan Report";
             this.dietplanreport.UseVisualStyleBackColor = true;
+            this.dietplanreport.Click += new System.EventHandler(this.dietplanreport_Click);
             // 
             // createdietplan
             // 
@@ -286,9 +296,10 @@
             this.createdietplan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createdietplan.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createdietplan.ForeColor = System.Drawing.Color.White;
-            this.createdietplan.Location = new System.Drawing.Point(8, 330);
+            this.createdietplan.Location = new System.Drawing.Point(11, 406);
+            this.createdietplan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.createdietplan.Name = "createdietplan";
-            this.createdietplan.Size = new System.Drawing.Size(271, 54);
+            this.createdietplan.Size = new System.Drawing.Size(361, 66);
             this.createdietplan.TabIndex = 141;
             this.createdietplan.Text = "Create Diet Plan";
             this.createdietplan.UseVisualStyleBackColor = true;
@@ -300,12 +311,14 @@
             this.workoutplanreport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.workoutplanreport.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.workoutplanreport.ForeColor = System.Drawing.Color.White;
-            this.workoutplanreport.Location = new System.Drawing.Point(8, 270);
+            this.workoutplanreport.Location = new System.Drawing.Point(11, 332);
+            this.workoutplanreport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.workoutplanreport.Name = "workoutplanreport";
-            this.workoutplanreport.Size = new System.Drawing.Size(271, 54);
+            this.workoutplanreport.Size = new System.Drawing.Size(361, 66);
             this.workoutplanreport.TabIndex = 140;
             this.workoutplanreport.Text = "Workout Plan Report";
             this.workoutplanreport.UseVisualStyleBackColor = true;
+            this.workoutplanreport.Click += new System.EventHandler(this.workoutplanreport_Click);
             // 
             // createworkoutplan
             // 
@@ -313,9 +326,10 @@
             this.createworkoutplan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createworkoutplan.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createworkoutplan.ForeColor = System.Drawing.Color.White;
-            this.createworkoutplan.Location = new System.Drawing.Point(19, 210);
+            this.createworkoutplan.Location = new System.Drawing.Point(25, 258);
+            this.createworkoutplan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.createworkoutplan.Name = "createworkoutplan";
-            this.createworkoutplan.Size = new System.Drawing.Size(271, 54);
+            this.createworkoutplan.Size = new System.Drawing.Size(361, 66);
             this.createworkoutplan.TabIndex = 139;
             this.createworkoutplan.Text = "Create Workout Plan";
             this.createworkoutplan.UseVisualStyleBackColor = true;
@@ -327,9 +341,10 @@
             this.Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Home.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Home.ForeColor = System.Drawing.Color.White;
-            this.Home.Location = new System.Drawing.Point(8, 150);
+            this.Home.Location = new System.Drawing.Point(11, 185);
+            this.Home.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Home.Name = "Home";
-            this.Home.Size = new System.Drawing.Size(268, 54);
+            this.Home.Size = new System.Drawing.Size(357, 66);
             this.Home.TabIndex = 136;
             this.Home.Text = "Home";
             this.Home.UseVisualStyleBackColor = true;
@@ -339,61 +354,71 @@
             // 
             this.radioButton28.AutoSize = true;
             this.radioButton28.Font = new System.Drawing.Font("Javanese Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton28.Location = new System.Drawing.Point(243, 19);
+            this.radioButton28.Location = new System.Drawing.Point(324, 23);
+            this.radioButton28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton28.Name = "radioButton28";
-            this.radioButton28.Size = new System.Drawing.Size(75, 40);
+            this.radioButton28.Size = new System.Drawing.Size(92, 49);
             this.radioButton28.TabIndex = 20;
             this.radioButton28.TabStop = true;
             this.radioButton28.Text = "3 🙃";
             this.radioButton28.UseVisualStyleBackColor = true;
+            this.radioButton28.CheckedChanged += new System.EventHandler(this.radioButton28_CheckedChanged_2);
             // 
             // radioButton29
             // 
             this.radioButton29.AutoSize = true;
             this.radioButton29.Font = new System.Drawing.Font("Javanese Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton29.Location = new System.Drawing.Point(162, 19);
+            this.radioButton29.Location = new System.Drawing.Point(216, 23);
+            this.radioButton29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton29.Name = "radioButton29";
-            this.radioButton29.Size = new System.Drawing.Size(75, 40);
+            this.radioButton29.Size = new System.Drawing.Size(92, 49);
             this.radioButton29.TabIndex = 19;
             this.radioButton29.TabStop = true;
             this.radioButton29.Text = "4 🙂";
             this.radioButton29.UseVisualStyleBackColor = true;
+            this.radioButton29.CheckedChanged += new System.EventHandler(this.radioButton29_CheckedChanged_2);
             // 
             // radioButton30
             // 
             this.radioButton30.AutoSize = true;
             this.radioButton30.Font = new System.Drawing.Font("Javanese Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton30.Location = new System.Drawing.Point(73, 19);
+            this.radioButton30.Location = new System.Drawing.Point(97, 23);
+            this.radioButton30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton30.Name = "radioButton30";
-            this.radioButton30.Size = new System.Drawing.Size(75, 40);
+            this.radioButton30.Size = new System.Drawing.Size(92, 49);
             this.radioButton30.TabIndex = 18;
             this.radioButton30.TabStop = true;
             this.radioButton30.Text = "5 ☺️";
             this.radioButton30.UseVisualStyleBackColor = true;
+            this.radioButton30.CheckedChanged += new System.EventHandler(this.radioButton30_CheckedChanged_1);
             // 
             // radioButton27
             // 
             this.radioButton27.AutoSize = true;
             this.radioButton27.Font = new System.Drawing.Font("Javanese Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton27.Location = new System.Drawing.Point(324, 19);
+            this.radioButton27.Location = new System.Drawing.Point(432, 23);
+            this.radioButton27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton27.Name = "radioButton27";
-            this.radioButton27.Size = new System.Drawing.Size(75, 40);
+            this.radioButton27.Size = new System.Drawing.Size(92, 49);
             this.radioButton27.TabIndex = 21;
             this.radioButton27.TabStop = true;
             this.radioButton27.Text = "2 🥺";
             this.radioButton27.UseVisualStyleBackColor = true;
+            this.radioButton27.CheckedChanged += new System.EventHandler(this.radioButton27_CheckedChanged_1);
             // 
             // radioButton26
             // 
             this.radioButton26.AutoSize = true;
             this.radioButton26.Font = new System.Drawing.Font("Javanese Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton26.Location = new System.Drawing.Point(405, 19);
+            this.radioButton26.Location = new System.Drawing.Point(540, 23);
+            this.radioButton26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton26.Name = "radioButton26";
-            this.radioButton26.Size = new System.Drawing.Size(72, 40);
+            this.radioButton26.Size = new System.Drawing.Size(88, 49);
             this.radioButton26.TabIndex = 22;
             this.radioButton26.TabStop = true;
             this.radioButton26.Text = "1 😭";
             this.radioButton26.UseVisualStyleBackColor = true;
+            this.radioButton26.CheckedChanged += new System.EventHandler(this.radioButton26_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -404,11 +429,14 @@
             this.groupBox1.Controls.Add(this.radioButton29);
             this.groupBox1.Controls.Add(this.radioButton28);
             this.groupBox1.ForeColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Location = new System.Drawing.Point(474, 228);
+            this.groupBox1.Location = new System.Drawing.Point(632, 281);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(682, 61);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(909, 75);
             this.groupBox1.TabIndex = 73;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter_1);
             // 
             // groupBox3
             // 
@@ -417,9 +445,11 @@
             this.groupBox3.Controls.Add(this.radioButton8);
             this.groupBox3.Controls.Add(this.radioButton9);
             this.groupBox3.Controls.Add(this.radioButton10);
-            this.groupBox3.Location = new System.Drawing.Point(474, 310);
+            this.groupBox3.Location = new System.Drawing.Point(632, 382);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(682, 61);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(909, 75);
             this.groupBox3.TabIndex = 75;
             this.groupBox3.TabStop = false;
             // 
@@ -427,21 +457,24 @@
             // 
             this.radioButton6.AutoSize = true;
             this.radioButton6.Font = new System.Drawing.Font("Javanese Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton6.Location = new System.Drawing.Point(468, 17);
+            this.radioButton6.Location = new System.Drawing.Point(624, 21);
+            this.radioButton6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(176, 38);
+            this.radioButton6.Size = new System.Drawing.Size(216, 47);
             this.radioButton6.TabIndex = 12;
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "Extra-Ordinary 😭";
             this.radioButton6.UseVisualStyleBackColor = true;
+            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged_1);
             // 
             // radioButton7
             // 
             this.radioButton7.AutoSize = true;
             this.radioButton7.Font = new System.Drawing.Font("Javanese Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton7.Location = new System.Drawing.Point(364, 17);
+            this.radioButton7.Location = new System.Drawing.Point(485, 21);
+            this.radioButton7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(98, 38);
+            this.radioButton7.Size = new System.Drawing.Size(119, 47);
             this.radioButton7.TabIndex = 11;
             this.radioButton7.TabStop = true;
             this.radioButton7.Text = "Poor 🥺";
@@ -451,9 +484,10 @@
             // 
             this.radioButton8.AutoSize = true;
             this.radioButton8.Font = new System.Drawing.Font("Javanese Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton8.Location = new System.Drawing.Point(245, 17);
+            this.radioButton8.Location = new System.Drawing.Point(327, 21);
+            this.radioButton8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(122, 38);
+            this.radioButton8.Size = new System.Drawing.Size(148, 47);
             this.radioButton8.TabIndex = 10;
             this.radioButton8.TabStop = true;
             this.radioButton8.Text = "Average 🙃";
@@ -463,9 +497,10 @@
             // 
             this.radioButton9.AutoSize = true;
             this.radioButton9.Font = new System.Drawing.Font("Javanese Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton9.Location = new System.Drawing.Point(142, 17);
+            this.radioButton9.Location = new System.Drawing.Point(189, 21);
+            this.radioButton9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(103, 38);
+            this.radioButton9.Size = new System.Drawing.Size(126, 47);
             this.radioButton9.TabIndex = 9;
             this.radioButton9.TabStop = true;
             this.radioButton9.Text = "Good 🙂";
@@ -475,9 +510,10 @@
             // 
             this.radioButton10.AutoSize = true;
             this.radioButton10.Font = new System.Drawing.Font("Javanese Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton10.Location = new System.Drawing.Point(12, 17);
+            this.radioButton10.Location = new System.Drawing.Point(16, 21);
+            this.radioButton10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(132, 38);
+            this.radioButton10.Size = new System.Drawing.Size(163, 47);
             this.radioButton10.TabIndex = 8;
             this.radioButton10.TabStop = true;
             this.radioButton10.Text = "Excellent ☺️";
@@ -490,9 +526,11 @@
             this.groupBox4.Controls.Add(this.radioButton13);
             this.groupBox4.Controls.Add(this.radioButton14);
             this.groupBox4.Controls.Add(this.radioButton15);
-            this.groupBox4.Location = new System.Drawing.Point(474, 388);
+            this.groupBox4.Location = new System.Drawing.Point(632, 478);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(682, 61);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Size = new System.Drawing.Size(909, 75);
             this.groupBox4.TabIndex = 76;
             this.groupBox4.TabStop = false;
             // 
@@ -500,21 +538,24 @@
             // 
             this.radioButton11.AutoSize = true;
             this.radioButton11.Font = new System.Drawing.Font("Javanese Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton11.Location = new System.Drawing.Point(468, 17);
+            this.radioButton11.Location = new System.Drawing.Point(624, 21);
+            this.radioButton11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(176, 38);
+            this.radioButton11.Size = new System.Drawing.Size(216, 47);
             this.radioButton11.TabIndex = 12;
             this.radioButton11.TabStop = true;
             this.radioButton11.Text = "Extra-Ordinary 😭";
             this.radioButton11.UseVisualStyleBackColor = true;
+            this.radioButton11.CheckedChanged += new System.EventHandler(this.radioButton11_CheckedChanged_1);
             // 
             // radioButton12
             // 
             this.radioButton12.AutoSize = true;
             this.radioButton12.Font = new System.Drawing.Font("Javanese Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton12.Location = new System.Drawing.Point(364, 17);
+            this.radioButton12.Location = new System.Drawing.Point(485, 21);
+            this.radioButton12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(98, 38);
+            this.radioButton12.Size = new System.Drawing.Size(119, 47);
             this.radioButton12.TabIndex = 11;
             this.radioButton12.TabStop = true;
             this.radioButton12.Text = "Poor 🥺";
@@ -524,9 +565,10 @@
             // 
             this.radioButton13.AutoSize = true;
             this.radioButton13.Font = new System.Drawing.Font("Javanese Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton13.Location = new System.Drawing.Point(245, 17);
+            this.radioButton13.Location = new System.Drawing.Point(327, 21);
+            this.radioButton13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton13.Name = "radioButton13";
-            this.radioButton13.Size = new System.Drawing.Size(122, 38);
+            this.radioButton13.Size = new System.Drawing.Size(148, 47);
             this.radioButton13.TabIndex = 10;
             this.radioButton13.TabStop = true;
             this.radioButton13.Text = "Average 🙃";
@@ -536,9 +578,10 @@
             // 
             this.radioButton14.AutoSize = true;
             this.radioButton14.Font = new System.Drawing.Font("Javanese Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton14.Location = new System.Drawing.Point(142, 17);
+            this.radioButton14.Location = new System.Drawing.Point(189, 21);
+            this.radioButton14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton14.Name = "radioButton14";
-            this.radioButton14.Size = new System.Drawing.Size(103, 38);
+            this.radioButton14.Size = new System.Drawing.Size(126, 47);
             this.radioButton14.TabIndex = 9;
             this.radioButton14.TabStop = true;
             this.radioButton14.Text = "Good 🙂";
@@ -548,9 +591,10 @@
             // 
             this.radioButton15.AutoSize = true;
             this.radioButton15.Font = new System.Drawing.Font("Javanese Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton15.Location = new System.Drawing.Point(12, 17);
+            this.radioButton15.Location = new System.Drawing.Point(16, 21);
+            this.radioButton15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton15.Name = "radioButton15";
-            this.radioButton15.Size = new System.Drawing.Size(132, 38);
+            this.radioButton15.Size = new System.Drawing.Size(163, 47);
             this.radioButton15.TabIndex = 8;
             this.radioButton15.TabStop = true;
             this.radioButton15.Text = "Excellent ☺️";
@@ -561,19 +605,20 @@
             this.name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(115)))), ((int)(((byte)(103)))));
             this.name.Controls.Add(this.logo);
             this.name.Controls.Add(this.label25);
-            this.name.Location = new System.Drawing.Point(309, 0);
+            this.name.Location = new System.Drawing.Point(412, 0);
+            this.name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(120, 121);
+            this.name.Size = new System.Drawing.Size(160, 149);
             this.name.TabIndex = 79;
             // 
             // logo
             // 
             this.logo.BackgroundImage = global::project.Properties.Resources.icon3;
             this.logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.logo.Location = new System.Drawing.Point(17, 8);
+            this.logo.Location = new System.Drawing.Point(23, 10);
             this.logo.Margin = new System.Windows.Forms.Padding(0);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(82, 79);
+            this.logo.Size = new System.Drawing.Size(109, 97);
             this.logo.TabIndex = 3;
             // 
             // label25
@@ -581,9 +626,10 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(3, 87);
+            this.label25.Location = new System.Drawing.Point(4, 107);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(116, 22);
+            this.label25.Size = new System.Drawing.Size(147, 28);
             this.label25.TabIndex = 0;
             this.label25.Text = "Flex Trainer";
             // 
@@ -593,9 +639,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(57)))), ((int)(((byte)(52)))));
-            this.button2.Location = new System.Drawing.Point(719, 682);
+            this.button2.Location = new System.Drawing.Point(991, 722);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 33);
+            this.button2.Size = new System.Drawing.Size(231, 41);
             this.button2.TabIndex = 80;
             this.button2.Text = "Submit";
             this.button2.UseVisualStyleBackColor = false;
@@ -605,9 +652,10 @@
             // 
             this.panel3.BackgroundImage = global::project.Properties.Resources.feedback;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(790, 55);
+            this.panel3.Location = new System.Drawing.Point(1053, 68);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(92, 69);
+            this.panel3.Size = new System.Drawing.Size(123, 85);
             this.panel3.TabIndex = 51;
             // 
             // panel4
@@ -615,36 +663,38 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(115)))), ((int)(((byte)(103)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1344, 37);
+            this.panel4.Size = new System.Drawing.Size(1792, 46);
             this.panel4.TabIndex = 78;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Javanese Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(877, 144);
+            this.label6.Location = new System.Drawing.Point(1169, 177);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(246, 62);
+            this.label6.Size = new System.Drawing.Size(303, 78);
             this.label6.TabIndex = 82;
             this.label6.Text = "Select TrainerID:";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1109, 162);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Location = new System.Drawing.Point(1479, 199);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(166, 21);
+            this.comboBox1.Size = new System.Drawing.Size(220, 24);
             this.comboBox1.TabIndex = 85;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // FeedbackMember
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(57)))), ((int)(((byte)(52)))));
-            this.ClientSize = new System.Drawing.Size(1344, 609);
+            this.ClientSize = new System.Drawing.Size(1792, 951);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button2);
@@ -663,6 +713,7 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FeedbackMember";
             this.Text = "Member Feedback";
             this.Load += new System.EventHandler(this.FeedbackMember_Load);

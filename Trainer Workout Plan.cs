@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace project
 {
@@ -134,7 +135,7 @@ namespace project
         private void givefeedback_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FeedbackTrainer form = new FeedbackTrainer();
+            FeedbackTrainer form = new FeedbackTrainer(trainerID);
             form.Show();
             form.FormClosed += (s, argc) => this.Close();
         }
@@ -160,7 +161,7 @@ namespace project
         private void createdietplan_Click(object sender, EventArgs e)
         {
             this.Hide();
-            dietplanTrainer form = new dietplanTrainer();
+            dietplanTrainer form = new dietplanTrainer(trainerID);
             form.Show();
             form.FormClosed += (s, argc) => this.Close();
         }
@@ -177,7 +178,7 @@ namespace project
         private void Approve1_Click(object sender, EventArgs e)
         {
 
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;SqlConnection conn = new SqlConnection(conString);
             conn.Open();
             SqlCommand cm;
             string day = maskedTextBox1.Text;
@@ -187,7 +188,7 @@ namespace project
             string muscle = comboBox1.Text;
             int restInterval = Convert.ToInt32(maskedTextBox3.Text);
             string level = comboBox3.Text;
-            string query = "Insert into WorkoutPlanTrainer values ('" + muscle + "','" + day + "'," + sets + "," + reps + "," + restInterval + ",'" + level + "'," + purpose + ",'" + trainerID + "')";
+            string query = "Insert into WorkoutPlanTrainer values ('" + muscle + "','" + day + "'," + sets + "," + reps + "," + restInterval + ",'" + level + "'," + trainerID + ",'" + purpose+"')";
             cm = new SqlCommand(query, conn);
             cm.ExecuteNonQuery();
             cm.Dispose();
@@ -224,6 +225,19 @@ namespace project
             FeedbackTrainer form = new FeedbackTrainer(trainerID);
             form.Show();
             form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void workoutplanreport_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            WorkoutPlanTrainerReport form = new WorkoutPlanTrainerReport(trainerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void dietplanreport_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

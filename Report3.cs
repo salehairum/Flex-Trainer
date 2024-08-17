@@ -15,8 +15,10 @@ namespace project
     {
         int dietPlanID;
         int trainerID;
-        public Report3()
+        int AdminID;
+        public Report3(int userId)
         {
+            AdminID = userId;
             InitializeComponent();
             LoadComboBoxDataWithTrainerID();
             LoadComboBoxDataWithDietPlanID();
@@ -112,6 +114,14 @@ namespace project
         private void label8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            viewForms form = new viewForms(AdminID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
         }
     }
 }

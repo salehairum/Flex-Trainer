@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace project
 {
@@ -24,7 +25,8 @@ namespace project
 
         private void gymowner_cs_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+            SqlConnection conn = new SqlConnection(conString);//connection string 
             conn.Open();
             string dob;
             SqlCommand cm1, cm2;
@@ -55,17 +57,12 @@ namespace project
 
         private void Home_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            gymowner_cs form = new gymowner_cs(gymOwnerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
         }
 
-        private void createworkoutplan_Click(object sender, EventArgs e)
-        {
-            //member report
-            //Hide();
-            //using (report form = new report())
-            //    form.ShowDialog();
-            //Show();
-        }
 
         private void booktrainingsession_Click(object sender, EventArgs e)
         {
@@ -91,20 +88,19 @@ namespace project
             form.FormClosed += (s, argc) => this.Close();
         }
 
-        private void workoutplanreport_Click(object sender, EventArgs e)
-        {
-            //Hide();
-            //using (report form = new report())
-            //    form.ShowDialog();
-            //Show();
-        }
-
         private void givefeedback_Click(object sender, EventArgs e)
         {
             this.Hide();
             registerGym form = new registerGym(gymOwnerID);
             form.Show();
             form.FormClosed += (s, argc) => this.Close();
+        }
+        private void workoutplanreport_Click(object sender, EventArgs e)
+        {
+            //Hide();
+            //using (report form = new report())
+            //    form.ShowDialog();
+            //Show();
         }
 
         private void label20_Click(object sender, EventArgs e)
@@ -115,6 +111,14 @@ namespace project
         private void title_Click(object sender, EventArgs e)
         {
 
+        }
+        private void createworkoutplan_Click(object sender, EventArgs e)
+        {
+            //member report
+            //Hide();
+            //using (report form = new report())
+            //    form.ShowDialog();
+            //Show();
         }
     }
 }

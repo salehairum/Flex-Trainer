@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace project
 {
@@ -29,7 +30,7 @@ namespace project
 
         private void LoadComboBoxDataWithGymID()
         {
-            using (SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;using (SqlConnection conn = new SqlConnection(conString))
             {
                 string query = "SELECT gymID FROM Gym";
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);
@@ -80,7 +81,7 @@ namespace project
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            viewForms form = new viewForms();
+            viewForms form = new viewForms(AdminID);
             form.Show();
             form.FormClosed += (s, argc) => this.Close();
         }
@@ -100,7 +101,7 @@ namespace project
 
         private void done_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;SqlConnection conn = new SqlConnection(conString);
 
             try
             {
@@ -148,7 +149,7 @@ namespace project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;SqlConnection conn = new SqlConnection(conString);
 
             conn.Open();
             SqlCommand cm1;
@@ -160,6 +161,38 @@ namespace project
             cm1.ExecuteNonQuery();
             MessageBox.Show("Gym Deactivated");
 
+        }
+
+        private void Home_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            admin form = new admin(AdminID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void createworkoutplan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            GymReport form = new GymReport(AdminID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void givefeedback_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            registerGymAdmin form = new registerGymAdmin(AdminID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            removeGym form = new removeGym(AdminID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
         }
     }
 }

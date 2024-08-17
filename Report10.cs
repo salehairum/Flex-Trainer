@@ -12,8 +12,10 @@ namespace project
 {
     public partial class Report10 : Form
     {
-        public Report10()
+        int AdminID;
+        public Report10(int userId)
         {
+            AdminID = userId;
             InitializeComponent();
         }
 
@@ -27,6 +29,14 @@ namespace project
                 sqlData.Fill(dtbl);
                 dataGridView1.DataSource = dtbl;
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            viewForms form = new viewForms(AdminID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
         }
     }
 }

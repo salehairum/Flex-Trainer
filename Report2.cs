@@ -15,12 +15,15 @@ namespace project
     {
         int gymID;
         int dietPlanID;
-        public Report2()
+        int AdminID;
+        public Report2(int userId)
         {
+            AdminID = userId;
             InitializeComponent();
             LoadComboBoxDataWithGymID();
             LoadComboBoxDataWithDietPlanID();
         }
+
 
         private void Reject1_Click(object sender, EventArgs e)
         {
@@ -112,6 +115,14 @@ namespace project
         private void Report2_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            viewForms form = new viewForms(AdminID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
         }
     }
 }

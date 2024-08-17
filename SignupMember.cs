@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Runtime.InteropServices.ComTypes;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Configuration;
 
 namespace project
 {
@@ -75,7 +76,7 @@ namespace project
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;SqlConnection conn = new SqlConnection(conString);
             conn.Open();
             SqlCommand cm, cm2, cm3, cm4;
             string uname = textBox1.Text;
@@ -150,7 +151,7 @@ namespace project
         }
         private void LoadComboBoxDataWithGym()
         {
-            using (SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))//connection string 
+           string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;using (SqlConnection conn = new SqlConnection(conString))
             {
                 string query = "SELECT gymID,gLocation FROM Gym";
                 SqlCommand cmd = new SqlCommand(query, conn);

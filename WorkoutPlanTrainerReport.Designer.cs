@@ -369,6 +369,7 @@ namespace project
             this.givefeedback.TabIndex = 137;
             this.givefeedback.Text = "View Feedback";
             this.givefeedback.UseVisualStyleBackColor = true;
+            this.givefeedback.Click += new System.EventHandler(this.givefeedback_Click);
             // 
             // booktrainingsession
             // 
@@ -383,6 +384,7 @@ namespace project
             this.booktrainingsession.TabIndex = 142;
             this.booktrainingsession.Text = "View Booking Requests";
             this.booktrainingsession.UseVisualStyleBackColor = true;
+            this.booktrainingsession.Click += new System.EventHandler(this.booktrainingsession_Click);
             // 
             // dietplanreport
             // 
@@ -397,6 +399,7 @@ namespace project
             this.dietplanreport.TabIndex = 138;
             this.dietplanreport.Text = "Diet Plan Report";
             this.dietplanreport.UseVisualStyleBackColor = true;
+            this.dietplanreport.Click += new System.EventHandler(this.dietplanreport_Click);
             // 
             // createdietplan
             // 
@@ -411,6 +414,7 @@ namespace project
             this.createdietplan.TabIndex = 141;
             this.createdietplan.Text = "Create Diet Plan";
             this.createdietplan.UseVisualStyleBackColor = true;
+            this.createdietplan.Click += new System.EventHandler(this.createdietplan_Click);
             // 
             // workoutplanreport
             // 
@@ -425,6 +429,7 @@ namespace project
             this.workoutplanreport.TabIndex = 140;
             this.workoutplanreport.Text = "Workout Plan Report";
             this.workoutplanreport.UseVisualStyleBackColor = true;
+            this.workoutplanreport.Click += new System.EventHandler(this.workoutplanreport_Click);
             // 
             // createworkoutplan
             // 
@@ -439,6 +444,7 @@ namespace project
             this.createworkoutplan.TabIndex = 139;
             this.createworkoutplan.Text = "Create Workout Plan";
             this.createworkoutplan.UseVisualStyleBackColor = true;
+            this.createworkoutplan.Click += new System.EventHandler(this.createworkoutplan_Click);
             // 
             // Home
             // 
@@ -453,6 +459,7 @@ namespace project
             this.Home.TabIndex = 136;
             this.Home.Text = "Home";
             this.Home.UseVisualStyleBackColor = true;
+            this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
             // logo
             // 

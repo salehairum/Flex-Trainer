@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace project
 {
@@ -197,18 +198,18 @@ namespace project
 
         private void dietplanreport_Click_1(object sender, EventArgs e)
         {
-            //Hide();
-            //using (report form = new report(memberID))
-            //    form.ShowDialog();
-            //Show();
+            this.Hide();
+            DietPlanReport form = new DietPlanReport(memberID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
         }
 
         private void workoutplanreport_Click_1(object sender, EventArgs e)
         {
-            //Hide();
-            //using (report form = new report(memberID))
-            //    form.ShowDialog();
-            //Show();
+            this.Hide();
+            WorkoutPlanReport form = new WorkoutPlanReport(memberID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
         }
 
         private void createdietplan_Click_1(object sender, EventArgs e)
@@ -236,8 +237,8 @@ namespace project
         }
         private void Approve1_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-E85OBQM\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
-            conn.Open();
+     
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString; SqlConnection conn = new SqlConnection(conString); conn.Open();
             SqlCommand cm;
             string day = maskedTextBox1.Text;
             string purpose = comboBox2.Text;
@@ -246,7 +247,7 @@ namespace project
             string muscle = comboBox1.Text;
             int restInterval = Convert.ToInt32(maskedTextBox3.Text);
             string level = comboBox3.Text;
-            string query = "Insert into WorkoutPlanMember values ('" + muscle + "','" + day + "'," + sets + "," + reps + "," + restInterval + ",'" + level + "',"+purpose+",'" + memberID + "')";
+            string query = "Insert into WorkoutPlanMember values ('" + muscle + "','" + day + "'," + sets + "," + reps + "," + restInterval + ",'" + level + "'," + memberID + ",'"+purpose+ "')";
             cm = new SqlCommand(query, conn);
             cm.ExecuteNonQuery();
             cm.Dispose();
@@ -255,6 +256,11 @@ namespace project
         }
 
         private void title_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -11,6 +11,7 @@ using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Configuration;
 
 namespace project
 {
@@ -76,7 +77,7 @@ namespace project
 
         private void LoadComboBoxDataWithTrainerID()
         {
-            using (SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;using (SqlConnection conn = new SqlConnection(conString))
             {
                 string query = "SELECT TrainerID FROM Trainer";
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);
@@ -122,7 +123,7 @@ namespace project
 
         private void done_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;SqlConnection conn = new SqlConnection(conString);
 
             try
             {
@@ -181,7 +182,7 @@ namespace project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;SqlConnection conn = new SqlConnection(conString);
             conn.Open();
             SqlCommand cm1;
             // Delete the trainer record from gym
@@ -191,5 +192,38 @@ namespace project
             cm1.ExecuteNonQuery();
             MessageBox.Show("Trainer Account Deactivated");
         }
+
+        private void booktrainingsession_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            RemoveTrainer form = new RemoveTrainer(this.gymOwnerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void createdietplan_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            RemoveMember form = new RemoveMember(gymOwnerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void dietplanreport_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddTrainer form = new AddTrainer(gymOwnerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void givefeedback_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            registerGym form = new registerGym(gymOwnerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
     }
 }

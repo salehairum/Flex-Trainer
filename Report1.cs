@@ -15,11 +15,13 @@ namespace project
     {
         int gymID;
         int trainerID;
-        public Report1()
+        int AdminID;
+        public Report1(int userId)
         {
             InitializeComponent();
             LoadComboBoxDataWithGymID();
             LoadComboBoxDataWithTrainerID();
+            AdminID = userId;
         }
 
         private void LoadComboBoxDataWithGymID()
@@ -118,6 +120,14 @@ namespace project
                 sqlData.Fill(dtbl);
                 dataGridView1.DataSource = dtbl;
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            viewForms form = new viewForms(AdminID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
         }
     }
 }

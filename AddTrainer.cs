@@ -10,6 +10,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace project
 {
@@ -29,7 +30,8 @@ namespace project
 
         private void AddTrainer_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+            SqlConnection conn = new SqlConnection(conString);//connection string 
             conn.Open();
 
             string query = "SELECT gymId FROM Gym where gymOwnerId=@gymownerid";
@@ -104,7 +106,8 @@ WHERE T.trainerID = @id"; // Assuming trainerID is defined
 
         private void done_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+            SqlConnection conn = new SqlConnection(conString);//connection string 
             conn.Open();
 
             string query = "update TrainerJoinsGym set approved = 1 where trainerId= @trainerId and gymId=@gymId";
@@ -122,7 +125,8 @@ WHERE T.trainerID = @id"; // Assuming trainerID is defined
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True");//connection string 
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+            SqlConnection conn = new SqlConnection(conString);//connection string 
             conn.Open();
             
             string query = "delete from TrainerJoinsGym where trainerId= @trainerId and gymId=@gymId";
@@ -134,6 +138,47 @@ WHERE T.trainerID = @id"; // Assuming trainerID is defined
             MessageBox.Show("Request Rejected");
             this.Hide();
             gymowner_cs form = new gymowner_cs(gymOwnerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void AddTrainer_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void workoutplanreport_Click(object sender, EventArgs e)
+        {
+                    }
+
+        private void createdietplan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RemoveMember form = new RemoveMember(gymOwnerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void dietplanreport_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddTrainer form = new AddTrainer(gymOwnerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void booktrainingsession_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RemoveTrainer form = new RemoveTrainer(this.gymOwnerID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void givefeedback_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            registerGym form = new registerGym(gymOwnerID);
             form.Show();
             form.FormClosed += (s, argc) => this.Close();
         }

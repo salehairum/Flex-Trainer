@@ -8,19 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace project
 {
     public partial class AReport10 : Form
     {
-        public AReport10()
+        int AdminID;
+        public AReport10(int userId)
         {
             InitializeComponent();
+            AdminID = userId;
         }
 
         private void Reject1_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sqlCon = new SqlConnection("Data Source=10N5Q8AKAMRA\\SQLEXPRESS;Initial Catalog=project;Integrated Security=True"))
+            string conString = ConfigurationManager.ConnectionStrings["MyDBConnection"].ConnectionString;
+
+            using (SqlConnection sqlCon = new SqlConnection(conString))
             {
                 sqlCon.Open();
                 SqlDataAdapter sqlData = new SqlDataAdapter("select  trainerId, count(workoutplanid) as number_of_plans from WorkoutPlanTrainer group by trainerID", sqlCon);
@@ -28,6 +33,20 @@ namespace project
                 sqlData.Fill(dtbl);
                 dataGridView1.DataSource = dtbl;
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            viewForms form = new viewForms(AdminID);
+            form.Show();
+            form.FormClosed += (s, argc) => this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
